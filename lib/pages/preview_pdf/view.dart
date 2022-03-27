@@ -16,7 +16,9 @@ class PreviewInvoicePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Invoice Preview'),
+        title:
+            const Text('Invoice Preview', style: TextStyle(color: Colors.teal)),
+        centerTitle: true,
       ),
       body: PdfPreview(
         maxPageWidth: 700,

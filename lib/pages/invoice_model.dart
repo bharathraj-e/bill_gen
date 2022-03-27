@@ -18,6 +18,8 @@ class InvoiceModel {
 
   bool isShipToSame = true;
 
+  String vehicleNo = '';
+
   final List<Product> products = [];
   double get amount {
     double f = 0.0;

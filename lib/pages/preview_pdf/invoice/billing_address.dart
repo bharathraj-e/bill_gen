@@ -51,6 +51,12 @@ Widget contentBillingAddress(Context context, InvoiceModel _) {
                   Text(_.isShipToSame ? _.billToSateCode : _.shipToSateCode),
                 ],
               ),
+              Row(
+                children: [
+                  Text('Vechicle No: '),
+                  Text(_.vehicleNo),
+                ],
+              ),
             ],
           ),
         ),

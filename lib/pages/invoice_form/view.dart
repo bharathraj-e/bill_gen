@@ -158,6 +158,23 @@ class InvoiceFormPage extends GetView<InvoiceFormController> {
                       Card(
                         elevation: 3,
                         child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: TextFormField(
+                            decoration: const InputDecoration(
+                              labelText: 'Vehicle No',
+                              alignLabelWithHint: true,
+                              prefixIcon: Icon(Icons.local_shipping),
+                            ),
+                            onChanged: (s) {
+                              _.invoiceModel.vehicleNo = s;
+                            },
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Card(
+                        elevation: 3,
+                        child: Padding(
                           padding: const EdgeInsets.all(6.0),
                           child: Column(
                             children: [
