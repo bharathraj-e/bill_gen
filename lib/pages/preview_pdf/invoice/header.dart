@@ -23,7 +23,29 @@ Widget buildHeader(Context context, InvoiceModel _) {
           children: [
             Expanded(
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.only(left: 20),
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        _.companyName,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                          color: PdfColors.teal,
+                        ),
+                      ),
+                      SizedBox(height: 2),
+                      Text(
+                        _.addressPrimary,
+                        style: const TextStyle(lineSpacing: 2),
+                      ),
+                    ]),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                padding: const EdgeInsets.only(right: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -39,30 +61,6 @@ Widget buildHeader(Context context, InvoiceModel _) {
                     Text("State Code   33TN"),
                   ],
                 ),
-              ),
-            ),
-            Expanded(
-              child: Container(
-                padding: const EdgeInsets.only(right: 20),
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Text(
-                        _.companyName,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                          color: PdfColors.teal,
-                        ),
-                        textAlign: TextAlign.right,
-                      ),
-                      SizedBox(height: 2),
-                      Text(
-                        _.addressPrimary,
-                        style: const TextStyle(lineSpacing: 2),
-                        textAlign: TextAlign.right,
-                      ),
-                    ]),
               ),
             ),
           ],

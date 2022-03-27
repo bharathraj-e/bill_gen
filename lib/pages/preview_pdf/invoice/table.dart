@@ -2,7 +2,7 @@ import 'package:bill_gen/pages/invoice_model.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart';
 
-Widget contentTable(Context context, InvoiceModel _) {
+Widget contentTable(Context context, InvoiceModel _, Font sFont) {
   const List<String> tableHeaders = [
     'S No',
     'Description of Goods',
@@ -80,13 +80,13 @@ Widget contentTable(Context context, InvoiceModel _) {
           },
         ),
         SizedBox(height: 4),
-        _total(_),
+        _total(_, sFont),
       ],
     ),
   );
 }
 
-Widget _total(InvoiceModel _) {
+Widget _total(InvoiceModel _, Font sFont) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.end,
     children: [
@@ -114,9 +114,10 @@ Widget _total(InvoiceModel _) {
           Text(_.sGst.toStringAsFixed(2), style: const TextStyle(fontSize: 12)),
           SizedBox(height: 4),
           Text(
-            _.grandTotal.toStringAsFixed(2),
+            "₹" + _.grandTotal.toStringAsFixed(2),
             style: TextStyle(
               fontWeight: FontWeight.bold,
+              font: sFont,
             ),
           ),
         ],

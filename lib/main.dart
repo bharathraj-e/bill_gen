@@ -1,14 +1,12 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:url_strategy/url_strategy.dart';
 
 import 'core/themes/app_theme.dart';
 import 'pages/splash/view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  setPathUrlStrategy();
   runApp(const MyApp());
 }
 

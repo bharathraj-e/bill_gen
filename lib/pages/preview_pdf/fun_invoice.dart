@@ -15,6 +15,8 @@ Future<Uint8List> generateInvoice(
   // Create a PDF document.
   final doc = Document();
 
+  var sFont = await PdfGoogleFonts.ubuntuRegular();
+
   // Add page to the PDF
   doc.addPage(
     MultiPage(
@@ -29,7 +31,7 @@ Future<Uint8List> generateInvoice(
       build: (context) => [
         contentBillingAddress(context, _),
         _divider(),
-        contentTable(context, _),
+        contentTable(context, _, sFont),
         _divider(),
         contentRupeesInWords(context, _),
         _divider(),

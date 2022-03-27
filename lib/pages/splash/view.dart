@@ -33,11 +33,10 @@ class _SplashPageState extends State<SplashPage> {
 
   void _redirect() async {
     await delay(1500);
-    Get.to(
+    Get.offAll(
       () => const InvoiceFormPage(),
       binding: BindingsBuilder.put(() => InvoiceFormController()),
       transition: Transition.zoom,
-      preventDuplicates: true,
     );
   }
 }

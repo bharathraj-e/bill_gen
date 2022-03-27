@@ -12,6 +12,13 @@ class InvoiceFormPage extends GetView<InvoiceFormController> {
     return GetBuilder<InvoiceFormController>(
       builder: (_) {
         return Scaffold(
+          appBar: AppBar(
+            title: const Text(
+              'Sri Vinayaga Traders',
+              style: TextStyle(color: Colors.teal),
+            ),
+            centerTitle: true,
+          ),
           body: SingleChildScrollView(
             child: Center(
               child: Container(
