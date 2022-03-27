@@ -20,5 +20,5 @@ jobs:
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
           targetBranch: release
-          baseHref: /
+          baseHref: /bill_gen/
           webRenderer: canvaskit
